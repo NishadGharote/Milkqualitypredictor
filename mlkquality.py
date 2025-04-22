@@ -425,26 +425,3 @@ predicted_lifespan, milk_status = predict_shelf_life(milk_type, pH, CO_ppm)
 
 print(f"\nPredicted Remaining Shelf Life: {predicted_lifespan:.2f} hours")
 print(f"Milk Status: {milk_status}")
-
-
-# In[5]:
-
-
-import joblib
-joblib.dump(rf_model_raw, "rf_model_raw.joblib")
-joblib.dump(rf_model_boiled, "rf_model_boiled.joblib")
-
-
-
-
-# In[ ]:
-
-
-tar -czf rf_model_raw.tar.gz rf_model_raw.pkl 
-
-
-# In[ ]:
-
-
-
-
